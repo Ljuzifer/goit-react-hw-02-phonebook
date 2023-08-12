@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
+import { GlobalStyle, Box } from './GlobalStyle';
 
 export class App extends Component {
   state = {
@@ -48,12 +49,6 @@ export class App extends Component {
     });
   };
 
-  // handleAlert = () => {
-  //   if (newContact === this.state.contacts.name) {
-  //     return alert(`${his.state.contacts.name} is already in contacts`);
-  //   }
-  // };
-
   render() {
     const { filter, contacts } = this.state;
     const filteredContacts = contacts.filter(contact =>
@@ -61,7 +56,7 @@ export class App extends Component {
     );
 
     return (
-      <div>
+      <Box>
         <h1>Phonebook</h1>
         <ContactForm onAddContact={this.handleAddContact} />
 
@@ -71,7 +66,9 @@ export class App extends Component {
           contacts={filteredContacts}
           contactDelete={this.handleContactDelete}
         />
-      </div>
+
+        <GlobalStyle />
+      </Box>
     );
   }
 }
