@@ -33,7 +33,7 @@ export const FormThumb = styled(Form)`
       font-size: 13px;
       font-style: normal;
       font-weight: 500;
-      color: rebeccapurple;
+      color: darkred;
       text-transform: lowercase;
     }
 
