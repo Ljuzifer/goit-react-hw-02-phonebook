@@ -39,9 +39,7 @@ button {
 `;
 
 export const Box = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 22px;
+  margin: 22px auto;
   padding: 40px;
   width: 666px;
   height: 100%;
