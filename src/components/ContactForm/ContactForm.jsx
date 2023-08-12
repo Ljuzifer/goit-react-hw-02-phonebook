@@ -1,6 +1,7 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
+import { FormThumb } from './ContactForm.styled';
 
 const formSchema = Yup.object().shape({
   name: Yup.string()
@@ -30,7 +31,7 @@ export const ContactForm = ({ onAddContact }) => {
         actions.resetForm();
       }}
     >
-      <Form>
+      <FormThumb>
         <label>
           Name
           <Field name="name" placeholder="Enter name" />
@@ -44,7 +45,7 @@ export const ContactForm = ({ onAddContact }) => {
         </label>
 
         <button type="submit">Add contact</button>
-      </Form>
+      </FormThumb>
     </Formik>
   );
 };
